@@ -11,7 +11,7 @@ const HeaderWrapper = styled.header`
   background-color: #344;
   color: #fefefe;
   justify-content: space-between;
-  padding: 0.7rem 1.5rem;
+  padding: 0.5rem 2.5rem;
   & > a {
     text-decoration: none;
   }
@@ -21,11 +21,17 @@ const HeaderWrapper = styled.header`
     margin: 0.5px;
   }
   .searchHotelfor {
-    margin: 0.5px;
+    margin: 0.3px;
   }
   .searchHotelinput {
     margin: 0.5px;
     padding: 2px;
+  }
+
+  h2 {
+    font-family: cursive;
+    color: #fefe;
+    margin: 0.5px;
   }
   .searchHotelButton {
     margin: 0.5px;
@@ -59,8 +65,7 @@ function SearchBar({ filteredPosts }) {
       <form autoComplete="off" onSubmit={onSubmit}>
         <label htmlFor="header-search">
           <h4 className="searchHotelfor">
-            {" "}
-            FOR: <p className="searchHotel">{locations}</p>
+            FOR: <span className="searchHotel">{locations}</span>
           </h4>
         </label>
         <input
