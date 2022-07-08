@@ -6,7 +6,7 @@ import { getLocation } from "../store/searchSlice";
 import SearchBar from "./SearchBar";
 import { nanoid } from "nanoid";
 import PlaceDetails from "./PlaceDetails";
-import LoadingSpinner from "../components/LoadingSpinner";
+// import LoadingSpinner from "../components/LoadingSpinner";
 const HomeWrapper = styled.div`
   display: flex;
   .map {
