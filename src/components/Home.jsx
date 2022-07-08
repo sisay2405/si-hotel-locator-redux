@@ -15,7 +15,7 @@ const HomeWrapper = styled.div`
 `;
 const Home = () => {
   const dispatch = useDispatch();
-  const { loading, locations, places, selected } = useSelector(
+  const { locations, places, selected } = useSelector(
     (state) => state.search,
     shallowEqual
   );
@@ -28,27 +28,21 @@ const Home = () => {
     <>
       <SearchBar filteredPosts={filteredPosts} />
       <HomeWrapper>
-        {!loading ? (
-          <>
-            <div>
-              {" "}
-              <Map places={places} />
+        <div>
+          {" "}
+          <Map places={places} />
+        </div>
+        <div className="map">
+          {places?.map((place, i) => (
+            <div key={nanoid()}>
+              <PlaceDetails
+                id={place.id}
+                place={place}
+                setSelected={place === selected}
+              />
             </div>
-            <div className="map">
-              {places?.map((place, i) => (
-                <div key={nanoid()}>
-                  <PlaceDetails
-                    id={place.id}
-                    place={place}
-                    setSelected={place === selected}
-                  />
-                </div>
-              ))}
-            </div>
-          </>
-        ) : (
-          <LoadingSpinner />
-        )}
+          ))}
+        </div>
       </HomeWrapper>
     </>
   );

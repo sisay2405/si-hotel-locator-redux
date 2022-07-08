@@ -9,13 +9,10 @@ const FooterWrapper = styled.footer`
   color: orange;
   padding: 1rem 0;
   text-align: center;
-
 `;
 
 const Footer = () => {
-  return (
-    <FooterWrapper>Sisay A & Abel © {new Date().getFullYear()}</FooterWrapper>
-  );
+  return <FooterWrapper>Sisay © {new Date().getFullYear()}</FooterWrapper>;
 };
 
 export default Footer;

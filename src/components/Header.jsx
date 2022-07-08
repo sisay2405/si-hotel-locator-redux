@@ -34,7 +34,7 @@ const HeaderWrapper = styled.header`
   h2 {
     font-family: cursive;
     color: #fefe;
-    margin: 0.5px;
+    // margin: 0.5px;
   }
   input {
     padding: 0.5rem;

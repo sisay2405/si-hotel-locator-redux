@@ -15,7 +15,7 @@ const MapWrapper = styled.div`
   position: fixed;
   Marker {
     cursor: pointer;
-    opacity: 0.7;
+    opacity: 0.8;
     &:hover {
       opacity: 1;
     }
